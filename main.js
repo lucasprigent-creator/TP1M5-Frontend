@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // On met à jour son contenu avec la donnée du JSON
             // Note : data.srv01 correspond à la clé dans data.json
             serveurElement.textContent = data.srv01;
+            
+            // On change la couleur en fonction du statut
+            if (data.srv01 === 'En Ligne') {
+                serveurElement.style.color = 'green';
+            } else {
+                serveurElement.style.color = 'red';
+            }
 
 
             // 6. MISE À JOUR DE LA CAMÉRA (CAM-01)
@@ -35,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // On met à jour son contenu
             // Note : data.cam01 correspond à la clé dans data.json
             cameraElement.textContent = data.cam01;
+            
+            // On change la couleur en fonction du statut
+            if (data.cam01 === 'En Ligne') {
+                cameraElement.style.color = 'green';
+            } else {
+                cameraElement.style.color = 'red';
+            }
         });
 
 
